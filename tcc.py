@@ -188,4 +188,4 @@ def upload_file():
   return resp
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port==7000)
