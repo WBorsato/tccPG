@@ -1,13 +1,13 @@
-import pandas as pd
+#import pandas as pd
 import numpy as np
-import tensorflow as tf
+#import tensorflow as tf
 #run_opts = tf.RunOptions(report_tensor_allocations_upon_oom = True)
 
 #model.compile(loss = "...", optimizer = "...", metrics = "..", options = run_opts)
-from keras.models import Sequential
-from keras import optimizers
-from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
-from keras.applications import ResNet50
+#from keras.models import Sequential
+#rom keras import optimizers
+#from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
+#from keras.applications import ResNet50
 from tensorflow.keras.models import model_from_json
 
 #base_model= ResNet50(include_top=False, weights="imagenet", input_shape=(224,224,3))
@@ -25,8 +25,8 @@ from tensorflow.keras.models import model_from_json
 #model.add(Dropout(0.4))
 #model.add(Dense(2, activation='softmax'))
 
-from keras import optimizers
-from keras_preprocessing.image import ImageDataGenerator
+#from keras import optimizers
+#from keras_preprocessing.image import ImageDataGenerator
 #train_generator = ImageDataGenerator(rescale = 1./255,
 #                                     rotation_range=10,  
 #                                     zoom_range = 0.1, 
