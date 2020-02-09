@@ -100,12 +100,12 @@ def load(filename):
    np_image = np.expand_dims(np_image, axis=0)
    return np_image
 
-def formatImage(file):
-   np_image = file
-   np_image = np.array(np_image).astype('float32')/255
-   np_image = transform.resize(np_image, (224, 224, 3))
-   np_image = np.expand_dims(np_image, axis=0)
-   return np_image
+#def formatImage(file):
+#   np_image = file
+#   np_image = np.array(np_image).astype('float32')/255
+#   np_image = transform.resize(np_image, (224, 224, 3))
+#   np_image = np.expand_dims(np_image, axis=0)
+#   return np_image
 
 #image = load('C:/Users/Welington/Documents/tcc/input/data/singletest/1.jpg')
 #print(image)
@@ -132,9 +132,9 @@ def formatImage(file):
 
 #API
 
-import cv2
-from flask_restful import Resource, Api
-from json import dumps
+#import cv2
+#from flask_restful import Resource, Api
+#from json import dumps
 
 import os
 import urllib.request
