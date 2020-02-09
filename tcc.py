@@ -10,20 +10,20 @@ from keras.layers import Dense, Conv2D, Dropout, Flatten, MaxPooling2D
 from keras.applications import ResNet50
 from tensorflow.keras.models import model_from_json
 
-base_model= ResNet50(include_top=False, weights="imagenet", input_shape=(224,224,3))
-
-model= Sequential()
-model.add(base_model)
-model.add(Conv2D(32, (3, 3), activation = 'relu'))
+#base_model= ResNet50(include_top=False, weights="imagenet", input_shape=(224,224,3))
+#
+#model= Sequential()
+#model.add(base_model)
+#model.add(Conv2D(32, (3, 3), activation = 'relu'))
+##model.add(MaxPooling2D(pool_size = (2, 2)))
+#model.add(Dropout(0.40))
+#model.add(Conv2D(32, (3, 3), activation = 'relu'))
 #model.add(MaxPooling2D(pool_size = (2, 2)))
-model.add(Dropout(0.40))
-model.add(Conv2D(32, (3, 3), activation = 'relu'))
-model.add(MaxPooling2D(pool_size = (2, 2)))
-model.add(Dropout(0.40))
-model.add(Flatten())
-model.add(Dense(256,activation='relu'))
-model.add(Dropout(0.4))
-model.add(Dense(2, activation='softmax'))
+#model.add(Dropout(0.40))
+#model.add(Flatten())
+#model.add(Dense(256,activation='relu'))
+#model.add(Dropout(0.4))
+#model.add(Dense(2, activation='softmax'))
 
 from keras import optimizers
 from keras_preprocessing.image import ImageDataGenerator
@@ -31,7 +31,7 @@ from keras_preprocessing.image import ImageDataGenerator
 #                                     rotation_range=10,  
 #                                     zoom_range = 0.1, 
 #                                     width_shift_range=0.1,  height_shift_range=0.1) 
-test_generator = ImageDataGenerator(rescale = 1./255)
+#test_generator = ImageDataGenerator(rescale = 1./255)
 
 #training_set = train_generator.flow_from_directory('C:/Users/Welington/Documents/tcc/input/data/train',
 #                                                 target_size = (224,224),
@@ -88,7 +88,7 @@ json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
 loaded_model.load_weights("model.h5")
-print("Loaded model from disk")
+#print("Loaded model from disk")
 
 from PIL import Image
 import numpy as np
@@ -166,15 +166,15 @@ def upload_file():
   #print(file.filename)
   filename = secure_filename(file.filename) 
   file.save(os.path.join(os.path.abspath(os.curdir), filename))  
-  print(os.path.join(os.path.abspath(os.curdir)+'/'+filename))
+  #print(os.path.join(os.path.abspath(os.curdir)+'/'+filename))
   path = os.path.join(os.path.abspath(os.curdir)+'/'+filename)
-  print('path = ' + path)
+  #print('path = ' + path)
 
   image = load(path)
-  print(image)
+  #print(image)
   y_pred= loaded_model.predict(image)
-  print(y_pred)
-
+  #print(y_pred)
+  
   #image = load(path)
   #print(image)
   #y_pred= loaded_model.predict(image)
