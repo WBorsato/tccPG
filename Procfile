@@ -1,2 +1,2 @@
 web: gunicorn gettingstarted.wsgi --log-file -
-web: python tcc.py
+worker: python tcc.py
