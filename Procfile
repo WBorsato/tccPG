@@ -1,2 +1,1 @@
-web: gunicorn gettingstarted.wsgi --log-file -
-web: python tcc.py
+web: python tcc.py runserver 0.0.0.0:5000
