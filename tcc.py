@@ -66,4 +66,4 @@ def upload_file():
   return resp
 
 if __name__ == "__main__":
-    app.run(host='tccwelington.herokuapp.com', port=os.environ.get('PORT'))
+    app.run(port=os.environ.get('PORT'))
