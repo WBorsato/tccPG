@@ -66,4 +66,4 @@ def upload_file():
   return resp
 
 if __name__ == "__main__":
-    app.run(port=os.environ.get('PORT'))
+    app.run(debug = None,port=os.environ.get('PORT'))
