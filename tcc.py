@@ -46,7 +46,7 @@ def upload_file():
   resp = jsonify({'message' : 'No file selected for uploading'})
   resp.status_code = 400
   return resp
- if file and allowed_file(file.filename):
+ if file: #and allowed_file(file.filename):
   #filename = secure_filename(file.filename) 
   #file.save(os.path.join(os.path.abspath(os.curdir), filename))  
   #path = os.path.join(os.path.abspath(os.curdir)+'/'+filename)
